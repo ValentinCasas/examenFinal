@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_listarNotas"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="listar notas" />
+        <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
@@ -21,10 +25,7 @@
             android:id="@+id/nav_cargarNotas"
             android:icon="@android:drawable/ic_input_add"
             android:title="cargar notas" />
-        <item
-            android:id="@+id/nav_listarNotas"
-            android:icon="@android:drawable/ic_menu_search"
-            android:title="listar notas" />
+
         <item
             android:id="@+id/nav_salirFragment"
             android:icon="@android:drawable/ic_delete"

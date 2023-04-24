@@ -22,7 +22,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import usuario.example.tpanexoa.R;
-import usuario.example.tpanexoa.databinding.FragmentActividadBinding;
 import usuario.example.tpanexoa.databinding.FragmentCargarBinding;
 import usuario.example.tpanexoa.listarNotas.ListarViewModel;
 

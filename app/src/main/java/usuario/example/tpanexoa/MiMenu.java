@@ -16,9 +16,13 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 import usuario.example.tpanexoa.databinding.ActivityMiMenuBinding;
 
 public class MiMenu extends AppCompatActivity {
+
+    public static ArrayList<String> notas = new ArrayList<>();
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMiMenuBinding binding;

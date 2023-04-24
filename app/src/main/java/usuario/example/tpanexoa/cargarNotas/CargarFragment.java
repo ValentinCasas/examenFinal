@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import usuario.example.tpanexoa.MiMenu;
 import usuario.example.tpanexoa.R;
 import usuario.example.tpanexoa.databinding.FragmentCargarBinding;
 import usuario.example.tpanexoa.listarNotas.ListarViewModel;
@@ -28,7 +29,6 @@ import usuario.example.tpanexoa.listarNotas.ListarViewModel;
 public class CargarFragment extends Fragment {
 
     private CargarViewModel cargarViewModel;
-    private ListarViewModel listarViewModel;
     private FragmentCargarBinding binding;
 
     public static CargarFragment newInstance() {
@@ -48,9 +48,8 @@ public class CargarFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String nuevaNota = etNota.getText().toString().trim();
-                cargarViewModel.agregarNota(nuevaNota);
-                listarViewModel.agregarNota(nuevaNota);
-                etNota.setText("");
+                    cargarViewModel.agregarNota(nuevaNota);
+                    etNota.setText("");
             }
         });
 
@@ -61,8 +60,8 @@ public class CargarFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         cargarViewModel = new ViewModelProvider(this).get(CargarViewModel.class);
-        listarViewModel = new ViewModelProvider(this).get(ListarViewModel.class);
     }
 }
+
 
 

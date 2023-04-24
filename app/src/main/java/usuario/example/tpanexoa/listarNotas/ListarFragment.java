@@ -58,16 +58,13 @@ public class ListarFragment extends Fragment {
         rvNotas.setAdapter(mAdapter);
 
         mViewModel = new ViewModelProvider(this).get(ListarViewModel.class);
-        mViewModel.getListaNotas().observe(getViewLifecycleOwner(), new Observer<List<String>>() {
+        mViewModel.getListaNotas().observe(getViewLifecycleOwner(), new Observer<ArrayList<String>>() {
             @Override
-            public void onChanged(List<String> notas) {
+            public void onChanged(ArrayList<String> notas) {
                 mAdapter.setNotas(notas);
+                mAdapter.notifyDataSetChanged();
             }
         });
-
-        // Llamar a cargarNotas() después de haber creado la instancia de mViewModel
-        mViewModel.cargarNotas();
     }
+
 }
-
-
